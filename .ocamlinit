@@ -1,6 +1,2 @@
-open Painter;;
-open Vector2D;;
-open Shape;;
-
 Graphics.open_graph "";;
-Interavctive.init ();;
+Gui.init ();;
