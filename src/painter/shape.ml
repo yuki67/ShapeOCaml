@@ -48,6 +48,6 @@ let rec map_on_points f = function
   | Recursive (gen, init, n) -> Recursive (gen, map_on_points f init, n)
   | ShapeList lst -> ShapeList (map (map_on_points f) lst)
 
-let rec enlarge center r = map_on_points (fun x -> lerp center x r)
+let enlarge center r = map_on_points (fun x -> lerp center x r)
 
-let rec move v = map_on_points (fun x -> x +.. v)
+let move v = map_on_points (fun x -> x +.. v)
