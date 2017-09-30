@@ -1,3 +1,0 @@
-[submodule "src/myExt"]
-	path = src/myExt
-	url = https://github.com/yuki67/ShapeOCaml.git
