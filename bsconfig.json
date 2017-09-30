@@ -1,0 +1,13 @@
+{
+    "name": "bstest",
+    "version": "0.1.0",
+    "bs-dependencies" : [
+	// add your bs-dependencies here
+    ],
+    "sources" : [
+	{ "dir" : "src/myExt/src" },
+	{ "dir" : "src/painter" },
+	{ "dir" : "src/gallery" },
+	{ "dir" : "src/page" }
+    ]
+}
