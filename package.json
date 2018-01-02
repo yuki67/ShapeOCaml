@@ -4,7 +4,7 @@
    "scripts": {
       "clean": "bsb -clean-world",
       "build": "bsb -make-world",
-      "page": "npm run build && browserify lib/js/src/page/index.js -o bundle.js",
+      "page": "npm run build && browserify lib/js/src/page/index.js -o docs/bundle.js",
       "watch": "bsb -make-world -w"
    },
    "keywords": [
