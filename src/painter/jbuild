@@ -2,4 +2,4 @@
 
 (library
  ((name        Painter)
-  (libraries   (MyExt graphics))))
+  (libraries   (MyExt))))

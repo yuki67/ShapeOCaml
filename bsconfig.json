@@ -1,5 +1,5 @@
 {
-    "name": "bstest",
+    "name": "shape_ocaml",
     "version": "0.1.0",
     "bs-dependencies" : [
 	// add your bs-dependencies here

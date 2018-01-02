@@ -2,4 +2,4 @@
 
 (library
  ((name        Gui)
-  (libraries  (Painter Gallery))))
+  (libraries  (Painter Gallery graphics))))

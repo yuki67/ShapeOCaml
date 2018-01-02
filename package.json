@@ -1,5 +1,5 @@
 {
-   "name": "bstest",
+   "name": "shape_ocaml",
    "version": "0.1.0",
    "scripts": {
       "clean": "bsb -clean-world",
@@ -11,8 +11,9 @@
       "BuckleScript"
    ],
    "license": "MIT",
-   "devDependencies": {
-      "bs-platform": "1.9.2",
-      "browserify": "14.4.0"
+   "devDependencies": {},
+   "dependencies": {
+      "browserify": "^14.5.0",
+      "bs-platform": "^2.1.0"
    }
 }
