@@ -40,7 +40,7 @@ let refresh_canvas_size () =
   |> Canvas.set_height (int_of_float !canvas_size)
 
 let redraw () =
-  let open Painter.Vector2D in
+  let open ShapeOCaml.Vector2D in
   Context.clearRect 0 0 (int_of_float !canvas_size) (int_of_float !canvas_size) context;
   !shape ()
   |> Shape.enlarge (mk 0.0 0.0) (!canvas_size -. 10.0)

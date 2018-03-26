@@ -2,4 +2,4 @@
 
 (library
  ((name        Gallery)
-  (libraries  (Painter))))
+  (libraries  (ShapeOCaml))))

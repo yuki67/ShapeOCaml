@@ -1,6 +1,6 @@
 let square_subtransform f n =
-  let open Painter in
-  let open Painter.Vector2D in
+  let open ShapeOCaml in
+  let open ShapeOCaml.Vector2D in
   let gen shape =
     let p0, p2, p8, p6 =
       match Shape.dest_polygon shape with
@@ -29,7 +29,7 @@ let square_subtransform f n =
      n)
 
 let circloid f n =
-  let open Painter in
+  let open ShapeOCaml in
   let open MyExt in
   let points = Shape.regular_polygon_array (Vector2D.mk 0.5 0.5) n 0.5 in
   ListExt.all_pairs (fun x y -> x, y) (ListExt.range n) (ListExt.range n)

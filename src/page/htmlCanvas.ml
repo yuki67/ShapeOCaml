@@ -1,5 +1,4 @@
 open JsExt
-open Painter
 open Vector2D
 
 let (||>) v f = f v; v

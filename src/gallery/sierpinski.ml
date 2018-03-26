@@ -1,7 +1,7 @@
 let n = ref 6
 
 let shape () =
-  let open Painter in
+  let open ShapeOCaml in
   let gen shape =
     let lst = Shape.dest_polygon shape in
     let shapes = List.map (fun v -> Shape.enlarge v 0.5 shape) lst in

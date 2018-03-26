@@ -2,4 +2,4 @@
 
 (library
  ((name        Gui)
-  (libraries  (Painter Gallery graphics))))
+  (libraries  (ShapeOCaml Gallery graphics))))

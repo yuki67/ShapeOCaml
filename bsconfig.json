@@ -6,7 +6,7 @@
     ],
     "sources" : [
 	{ "dir" : "src/myExt/src" },
-	{ "dir" : "src/painter" },
+	{ "dir" : "src/shape_ocaml" },
 	{ "dir" : "src/gallery" },
 	{ "dir" : "src/page" }
     ]
