@@ -1,6 +1,11 @@
 exception Iter_stop
 
-type primitive_shape = POINT | LINE | POLYGON | CIRCLE
+type primitive_shape =
+  | POINT
+  | LINE
+  | POLYGON
+  | CIRCLE
+
 type t =
   | Point of Vector2D.t
   | Line of Vector2D.t * Vector2D.t
@@ -8,6 +13,7 @@ type t =
   | Circle of Vector2D.t * float
   | Recursive of (t -> int -> t) * t * int
   | ShapeList of t list
+
 val pi : float
 
 val dest_point : t -> Vector2D.t

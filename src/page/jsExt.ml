@@ -9,6 +9,8 @@ struct
   external _insertBefore : 'a -> 'b -> 'c -> unit  = "insertBefore" [@@bs.send]
   let insertBefore place elem =
     _insertBefore (get place "parentNode") elem place
+  let hide elem = set (get elem "style") "display" "none"
+  let show elem = set (get elem "style") "display" "inline"
 end
 
 module Document =
