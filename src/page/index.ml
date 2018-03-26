@@ -15,6 +15,12 @@ let exhibitions =
     (JsCardioid.init,
      JsCardioid.shape,
      JsCardioid.wipe);
+    (JsSierpinskiLow.init,
+     JsSierpinskiLow.shape,
+     JsSierpinskiLow.wipe);
+    (JsSierpinskiHigh.init,
+     JsSierpinskiHigh.shape,
+     JsSierpinskiHigh.wipe);
   |]
 
 let init, shape, wipe =
@@ -70,6 +76,8 @@ let _ =
   ||> Select.add_option "Diamond" 1
   ||> Select.add_option "Net" 2
   ||> Select.add_option "Cardioid" 3
+  ||> Select.add_option "Siepinski (3)" 4
+  ||> Select.add_option "Siepinski (higher)" 5
   ||> Select.set_onchange
     (fun _ ->
        !wipe ();
