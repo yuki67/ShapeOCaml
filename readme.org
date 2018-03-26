@@ -1,0 +1,11 @@
+* ShapeOCaml
+
+*[[https://yuki42.netlify.com/post/more_bucklescript/][Try it online!]]*
+
+This program was written as an exercise in Bucklescript.
+You can try it [[https://yuki42.netlify.com/post/more_bucklescript/][online]], or by running commands below after cloning the repository and installing jbuilder and utop to ocaml.
+
+#+BEGIN_SRC bash
+$ jbuilder utop src/gui
+> Gui.start_tour ();;
+#+END_SRC
