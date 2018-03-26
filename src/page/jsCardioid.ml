@@ -26,7 +26,7 @@ let wipe () =
   Element.hide n_br;
   Element.hide k_br
 
-let init current_script redraw =
+let init canvas redraw =
   n_range
   ||> Range.set_step 10.0
   ||> Range.set_max 400.0
@@ -39,11 +39,11 @@ let init current_script redraw =
   ||> Range.set_value 2.0
   |> Range.set_oninput (fun _ -> refresh (); redraw ());
 
-  Element.insertBefore current_script (n_range ||> Range.show);
-  Element.insertBefore current_script (n_span ||> Span.show);
-  Element.insertBefore current_script (n_br ||> Element.show);
-  Element.insertBefore current_script (k_range ||> Range.show);
-  Element.insertBefore current_script (k_span ||> Span.show);
-  Element.insertBefore current_script (k_br ||> Element.show);
+  Canvas.insertBefore canvas (n_range ||> Range.show);
+  Canvas.insertBefore canvas (n_span ||> Span.show);
+  Canvas.insertBefore canvas (n_br ||> Element.show);
+  Canvas.insertBefore canvas (k_range ||> Range.show);
+  Canvas.insertBefore canvas (k_span ||> Span.show);
+  Canvas.insertBefore canvas (k_br ||> Element.show);
 
   refresh ()

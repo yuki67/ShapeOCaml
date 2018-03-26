@@ -18,14 +18,14 @@ let wipe () =
   Span.hide n_span;
   Element.hide n_br
 
-let init current_script redraw =
+let init canvas redraw =
   n_range
   ||> Range.set_max 64.0
   ||> Range.set_value 16.0
   |> Range.set_oninput (fun _ -> refresh (); redraw ());
 
-  Element.insertBefore current_script (n_range ||> Range.show);
-  Element.insertBefore current_script (n_span ||> Span.show);
-  Element.insertBefore current_script (n_br ||> Element.show);
+  Canvas.insertBefore canvas (n_range ||> Range.show);
+  Canvas.insertBefore canvas (n_span ||> Span.show);
+  Canvas.insertBefore canvas (n_br ||> Element.show);
 
   refresh ()

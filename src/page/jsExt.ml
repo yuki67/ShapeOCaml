@@ -1,14 +1,14 @@
 include Js
 
+external _insertBefore : 'a -> 'b -> 'c -> unit  = "insertBefore" [@@bs.send]
+
 module Element =
 struct
   type t
   external set : t -> string -> 'b -> unit = "" [@@bs.set_index]
   external get : t -> string -> 'b = "" [@@bs.get_index]
   external appendChild : 'a -> unit = "" [@@bs.send.pipe: 'a]
-  external _insertBefore : 'a -> 'b -> 'c -> unit  = "insertBefore" [@@bs.send]
-  let insertBefore place elem =
-    _insertBefore (get place "parentNode") elem place
+  let insertBefore place elem = _insertBefore (get place "parentNode") elem place
   let hide elem = set (get elem "style") "display" "none"
   let show elem = set (get elem "style") "display" "inline"
 end
@@ -48,6 +48,7 @@ struct
   let create () : t = Document.createElement "canvas"
   let set_width n canvas = set canvas "width" (string_of_int n)
   let set_height n canvas = set canvas "height" (string_of_int n)
+  let insertBefore place elem = _insertBefore (get place "parentNode") elem place
 end
 
 module Range =

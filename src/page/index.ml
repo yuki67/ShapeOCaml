@@ -53,8 +53,6 @@ let enlarge_canvas r () =
   redraw ()
 
 let _ =
-  let current_script = Document.current_script in
-
   canvas
   ||> Canvas.set_width (int_of_float !canvas_size)
   |> Canvas.set_height (int_of_float !canvas_size);
@@ -76,14 +74,14 @@ let _ =
     (fun _ ->
        !wipe ();
        load_exhibition (Select.get_value sel);
-       !init current_script redraw;
+       !init canvas redraw;
        redraw ())
   |> Document.just_put;
 
-  Element.insertBefore current_script enlarge_button;
-  Element.insertBefore current_script shrink_button;
-  Element.insertBefore current_script (Document.createElement "br");
-  Element.insertBefore current_script canvas;
+  Element.insertBefore Document.current_script enlarge_button;
+  Element.insertBefore Document.current_script shrink_button;
+  Element.insertBefore Document.current_script (Document.createElement "br");
+  Element.insertBefore Document.current_script canvas;
 
   HtmlCanvas.init context;
   ()
