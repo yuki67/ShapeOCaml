@@ -72,7 +72,7 @@ let _ =
   |> Button.set_onclick (enlarge_canvas 0.9);
 
   sel
-  ||> Select.add_option {j|choose |j} 0
+  ||> Select.add_option "" 0
   ||> Select.add_option "Diamond" 1
   ||> Select.add_option "Net" 2
   ||> Select.add_option "Cardioid" 3
@@ -84,7 +84,7 @@ let _ =
        load_exhibition (Select.get_value sel);
        !init canvas redraw;
        redraw ())
-  |> Document.just_put;
+  |> Element.insertBefore Document.current_script;
 
   Element.insertBefore Document.current_script enlarge_button;
   Element.insertBefore Document.current_script shrink_button;

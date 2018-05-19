@@ -18,6 +18,10 @@ let wipe () =
   Element.hide n_br
 
 let init canvas redraw =
+  Sierpinski.n := 2;
+  Sierpinski.m := 3;
+  Sierpinski.d := 0.5;
+
   n_range
   ||> Range.set_min 1.0
   ||> Range.set_max 8.0

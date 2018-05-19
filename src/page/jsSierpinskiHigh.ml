@@ -21,8 +21,8 @@ let refresh () =
   let str_k = string_of_int !Sierpinski.m in
   let str_d = string_of_float !Sierpinski.d in
   Span.set_text {j|n: $(str_n)|j} n_span;
-  Span.set_text {j|n: $(str_k)|j} m_span;
-  Span.set_text {j|n: $(str_d)|j} d_span
+  Span.set_text {j|m: $(str_k)|j} m_span;
+  Span.set_text {j|d: $(str_d)|j} d_span
 
 let wipe () =
   Range.hide n_range;
@@ -36,6 +36,10 @@ let wipe () =
   Element.hide d_br
 
 let init canvas redraw =
+  Sierpinski.n := 2;
+  Sierpinski.m := 3;
+  Sierpinski.d := 0.5;
+
   n_range
   ||> Range.set_min 1.0
   ||> Range.set_max 2.0
