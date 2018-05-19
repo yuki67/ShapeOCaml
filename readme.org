@@ -1,11 +1,19 @@
 * ShapeOCaml
 
-*[[https://yuki42.netlify.com/post/more_bucklescript/][Try it online!]]*
+[[https://yuki67.github.io/post/bucklescript_paint/][Try online]]
 
-This program was written as an exercise in Bucklescript.
-You can try it [[https://yuki42.netlify.com/post/more_bucklescript/][online]], or by running commands below after cloning the repository and installing jbuilder and utop to ocaml.
+** build command
+
+use OCaml's =Graphics= module
 
 #+BEGIN_SRC bash
 $ jbuilder utop src/gui
 > Gui.start_tour ();;
+#+END_SRC
+
+use html5's Canvas
+
+#+BEGIN_SRC bash
+$ npm run page
+$ open docs/index.html
 #+END_SRC
